@@ -21,8 +21,8 @@ public:
             lsum = 0;
         if(rsum < 0)
             rsum = 0;
+
         int tot = lsum + rsum + root->val;
-        
         sum = max(sum, tot);
         
         return root->val + max(lsum, rsum);
