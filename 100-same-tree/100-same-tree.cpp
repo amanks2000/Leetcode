@@ -21,7 +21,6 @@ public:
             if(p->val == q->val)
                 return true;
         }
-        
         return false;
     }
 };
