@@ -14,7 +14,7 @@ public:
     void helper(TreeNode* &root, TreeNode* target, int k, int flag, vector<int> &ans,                              unordered_map<TreeNode*, int> visited) {
         if(root == NULL)
             return;
-        // cout << k << " " << root->val << endl;
+
         if(k == 0 && flag == 1){
             ans.push_back(root->val);
             return;
@@ -33,9 +33,6 @@ public:
             if(!visited[root->right]) helper(root->right, target, k-1, flag, ans, visited);
             
             if(map[root] && root == target){
-                // cout << k-1 << "--" << map[root]->val << endl;
-                // TreeNode* x = root;
-                // root = NULL;
                 visited[root]++;
                 helper(map[root], map[root], k-1, flag, ans, visited);
             }
